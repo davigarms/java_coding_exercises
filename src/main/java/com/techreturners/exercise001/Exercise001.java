@@ -1,6 +1,8 @@
 package com.techreturners.exercise001;
 
+import java.util.ArrayList;
 import java.util.List;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -33,6 +35,12 @@ public class Exercise001 {
 
     public int countLinuxUsers(List<User> users) {
         // Add your code here
-        return 0;
+        List<User> linuxUsers = new ArrayList<User>();
+        for (User user : users) {
+            if (user.getType() == "Linux") {
+                linuxUsers.add(user);
+            } 
+        }
+        return linuxUsers.size();
     }
 }
