@@ -32,7 +32,7 @@ public class Exercise001 {
     public int countLinuxUsers(List<User> users) {
         List<User> linuxUsers = new ArrayList<User>();
         for (User user : users) {
-            if (user.getType() == "Linux") {
+            if (user.getType().equals("Linux")) {
                 linuxUsers.add(user);
             } 
         }
